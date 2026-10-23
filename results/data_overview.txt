@@ -1,0 +1,247 @@
+Rows, columns: (437115, 14)
+
+Column types:
+ Patron Type Code\npatron_type_code                          int64
+Patron Type Definition\n                                      str
+Total Checkouts\ncheckout_total                             int64
+Total Renewals\nrenewal_total                               int64
+Age Range\n                                                   str
+Home Library Code\nhome_library_code                          str
+Home Library Definition\n                                     str
+Circulation Active Month\n                                    str
+Circulation Active Year\n                                 float64
+Notification Preference Code\nnotification_medium_code        str
+Notification Code Definition                                  str
+Provided Email Address\n                                     bool
+Within San Francisco County                                  bool
+Year Patron Registered                                      int64
+dtype: object
+
+Missing values per column:
+ Patron Type Code\npatron_type_code                            0
+Patron Type Definition\n                                      0
+Total Checkouts\ncheckout_total                               0
+Total Renewals\nrenewal_total                                 0
+Age Range\n                                                 927
+Home Library Code\nhome_library_code                          2
+Home Library Definition\n                                     0
+Circulation Active Month\n                                    0
+Circulation Active Year\n                                 40592
+Notification Preference Code\nnotification_medium_code        0
+Notification Code Definition                               2700
+Provided Email Address\n                                      0
+Within San Francisco County                                   0
+Year Patron Registered                                        0
+dtype: int64
+
+Unique values per column:
+ Patron Type Code\npatron_type_code                          18
+Patron Type Definition\n                                    18
+Total Checkouts\ncheckout_total                           4812
+Total Renewals\nrenewal_total                             3337
+Age Range\n                                                 10
+Home Library Code\nhome_library_code                        67
+Home Library Definition\n                                   30
+Circulation Active Month\n                                  13
+Circulation Active Year\n                                   20
+Notification Preference Code\nnotification_medium_code       4
+Notification Code Definition                                 3
+Provided Email Address\n                                     2
+Within San Francisco County                                  2
+Year Patron Registered                                      20
+dtype: int64
+
+--- Patron Type Code
+patron_type_code ---
+Patron Type Code\npatron_type_code
+0      271588
+1       58767
+3       47366
+2       40340
+4       10587
+16       3707
+15       3161
+5         808
+55        209
+100       128
+12        117
+10        111
+17        109
+103        76
+104        14
+102        10
+101         9
+11          8
+Name: count, dtype: int64
+
+--- Patron Type Definition
+ ---
+Patron Type Definition\n
+Adult                  271588
+Juvenile                58767
+Senior                  47366
+Teen                    40340
+Welcome                 10587
+Digital Access Card      3707
+Teacher Card             3161
+Staff                     808
+Retired Staff             209
+At User Adult             128
+Library By Mail           117
+Visitor                   111
+Bibliocommons             109
+At User Senior             76
+At User Welcome            14
+At User Teen               10
+At User Juvenile            9
+Business                    8
+Name: count, dtype: int64
+
+--- Age Range
+ ---
+Age Range\n
+25 to 34 years       92790
+35 to 44 years       80477
+10 to 19 years       67320
+45 to 54 years       48752
+0 to 9 years         34642
+65 to 74 years       31906
+20 to 24 years       24484
+55 to 59 years       19281
+75 years and over    18872
+60 to 64 years       17664
+NaN                    927
+Name: count, dtype: int64
+
+--- Home Library Definition
+ ---
+Home Library Definition\n
+Main                 143471
+Richmond              20736
+Mission               19212
+Mission Bay           15878
+Ortega                15423
+Excelsior             14141
+Sunset                14091
+Chinatown             12759
+Eureka Valley         12190
+Park                  11138
+Marina                11131
+West Portal           10901
+Bernal                10882
+Merced                10544
+Noe Valley            10175
+North Beach           10126
+Presidio              10059
+Potrero                9586
+Parkside               9142
+Ingleside              8885
+Western Addition       8647
+Anza                   8477
+Glen Park              8294
+Portola                6890
+Bayview                6594
+Golden Gate            6591
+Visitacion Valley      5450
+Ocean View             3476
+Bookmobile             2097
+Unknown                 129
+Name: count, dtype: int64
+
+--- Circulation Active Month
+ ---
+Circulation Active Month\n
+January      147097
+              40592
+December      39455
+November      29926
+October       25451
+June          24082
+September     23282
+August        21810
+March         19857
+July          16617
+May           16479
+February      16476
+April         15991
+Name: count, dtype: int64
+
+--- Circulation Active Year
+ ---
+Circulation Active Year\n
+2022.0    140032
+2023.0    129621
+2021.0     53062
+2020.0     40951
+NaN        40592
+2019.0     25038
+2018.0      2651
+2017.0      1674
+2016.0      1004
+2015.0       874
+2014.0       588
+2013.0       370
+2012.0       239
+2011.0       133
+2010.0        80
+2009.0        68
+2008.0        42
+2007.0        31
+2006.0        26
+2005.0        24
+2004.0        15
+Name: count, dtype: int64
+
+--- Notification Preference Code
+notification_medium_code ---
+Notification Preference Code\nnotification_medium_code
+z    391614
+p     35559
+a      7242
+-      2700
+Name: count, dtype: int64
+
+--- Notification Code Definition ---
+Notification Code Definition
+Email    391614
+Phone     35559
+Print      7242
+NaN        2700
+Name: count, dtype: int64
+
+--- Provided Email Address
+ ---
+Provided Email Address\n
+True     391563
+False     45552
+Name: count, dtype: int64
+
+--- Within San Francisco County ---
+Within San Francisco County
+True     369259
+False     67856
+Name: count, dtype: int64
+
+--- Year Patron Registered ---
+Year Patron Registered
+2019    56437
+2022    52377
+2003    42903
+2020    32999
+2021    32568
+2017    30419
+2018    30262
+2016    22551
+2015    21105
+2014    17028
+2013    14245
+2012    13908
+2011    13285
+2009    12098
+2010    11884
+2008    10760
+2007     6900
+2006     5579
+2005     5069
+2004     4738
+Name: count, dtype: int64
