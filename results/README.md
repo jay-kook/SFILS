@@ -8,8 +8,9 @@
 
 ## Loading performance
 
-| Task                          | Time |
-| Whole load_data.py script     | 91.6 sec |
+| Task | Time |
+|------|------|
+| Whole load_data.py script | 91.6 sec |
 | Inserting 437,115 patron rows | 40.1 sec |
 
 Most of the script's time goes to reading the Excel file with pandas. The
@@ -22,15 +23,17 @@ I timed two queries on columns with no index, added an index to each column,
 and timed them again. Each query was run 5 times and the median is reported.
 For Query B, which returns 17,970 rows, I used total time (duration + fetch).
 
-| Query                                             | Without index | With index | Speedup |
-| A: `COUNT(*) WHERE year_registered = 2003`        | 0.217 sec     | 0.018 sec  | ~12x |
-| B: `WHERE total_checkouts > 1000` (17,970 rows)   | 0.215 sec     | 0.015 sec  | ~14x |
+| Query | Without index | With index | Speedup |
+|-------|---------------|------------|---------|
+| A: `COUNT(*) WHERE year_registered = 2003` | 0.217 sec | 0.018 sec | ~12x |
+| B: `WHERE total_checkouts > 1000` (17,970 rows) | 0.215 sec | 0.015 sec | ~14x |
 
 What EXPLAIN showed:
 
-| Query | Before                                   | After                                                                             |
-| A     | type ALL, no key, ~435,360 rows examined | type ref, idx_patrons_year_registered, ~84,922 rows, "Using index"                |
-| B     | type ALL, no key, ~435,360 rows examined | type range, idx_patrons_total_checkouts, ~33,470 rows, "Using where; Using index" |
+| Query | Before | After |
+|-------|--------|-------|
+| A | type ALL, no key, ~435,360 rows examined | type ref, idx_patrons_year_registered, ~84,922 rows, "Using index" |
+| B | type ALL, no key, ~435,360 rows examined | type range, idx_patrons_total_checkouts, ~33,470 rows, "Using where; Using index" |
 
 Building the indexes took 1.3 sec (year_registered) and 1.6 sec (total_checkouts).
 
@@ -50,7 +53,7 @@ adding only on columns that queries actually filter or sort by. MySQL had
 already indexed the four foreign key columns in patrons automatically, which is
 why the experiment used year_registered and total_checkouts.
 
-NOTE: EXPLAIN's row counts are estimates. Before the index, MySQL guessed that
+Note: EXPLAIN's row counts are estimates. Before the index, MySQL guessed that
 33% of rows would match Query B, but only 4.1% did, because it had no
 statistics on that column.
 
