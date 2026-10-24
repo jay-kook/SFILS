@@ -183,7 +183,7 @@ Key design decisions:
 
 ![Looking up a patron](screenshots/lookup.png)
 
-![Branch statistics](screenshots/branch_stats.png)
+![Average checkout statistics](screenshots/avg_checkouts_stats.png)
 
 Design notes:
 
