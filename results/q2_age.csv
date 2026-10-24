@@ -1,0 +1,11 @@
+age_range_label,patrons,avg_checkouts,avg_renewals
+"0 to 9 years",34642,68.5,46.7
+"10 to 19 years",67320,206.7,70.5
+"20 to 24 years",24484,163.6,47.3
+"25 to 34 years",92790,47.9,26.8
+"35 to 44 years",80477,76.5,54.9
+"45 to 54 years",48752,184.8,111.1
+"55 to 59 years",19281,262.2,132.0
+"60 to 64 years",17664,297.2,142.5
+"65 to 74 years",31906,361.9,157.8
+"75 years and over",18872,422.3,141.8

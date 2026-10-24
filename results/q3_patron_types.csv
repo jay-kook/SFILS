@@ -1,0 +1,19 @@
+patron_type_name,patrons,avg_checkouts
+"Retired Staff",209,1355.7
+Staff,808,1204.9
+Senior,47366,392.6
+"At User Senior",76,390.8
+"At User Adult",128,382.3
+"Library By Mail",117,342.6
+Teen,40340,235.1
+"Teacher Card",3161,161.4
+Adult,271588,125.7
+Juvenile,58767,106.3
+"At User Juvenile",9,83.2
+Business,8,56.0
+"At User Teen",10,33.1
+"At User Welcome",14,9.4
+Visitor,111,4.8
+"Digital Access Card",3707,3.6
+Welcome,10587,3.5
+Bibliocommons,109,0.0

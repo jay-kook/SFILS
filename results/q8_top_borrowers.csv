@@ -1,0 +1,11 @@
+patron_id,patron_type_name,branch_name,total_checkouts,year_registered
+364974,Adult,"Visitacion Valley",45380,2003
+40680,Adult,Ortega,34834,2003
+57090,Adult,Sunset,31385,2010
+193746,Adult,Chinatown,23292,2003
+76386,Senior,Main,22474,2003
+140614,Senior,Main,21890,2005
+47544,Adult,Chinatown,21304,2003
+416855,Senior,Main,20411,2003
+43650,Senior,Main,20206,2004
+107010,Senior,Chinatown,18906,2003
