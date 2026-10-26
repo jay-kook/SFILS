@@ -1,7 +1,5 @@
 # Project Documentation
 
-# SFILS Project Documentation
-
 This project builds a MySQL database for the San Francisco Public Library's
 patron usage data, along with Python scripts to load it and a terminal app to
 search and edit it.
@@ -14,7 +12,7 @@ search and edit it.
 
 ## Project structure
 
-| Folder / file | What's in it |
+| Folders / files | What's in the file |
 |---|---|
 | `scripts/schema.sql` | Creates the six tables |
 | `scripts/load_data.py` | Reads the Excel file, cleans it, and loads all tables |
@@ -34,7 +32,7 @@ These steps rebuild the whole project from scratch on a MacBook Air. It's assume
 [Homebrew](https://brew.sh) and [Anaconda or Miniconda](https://docs.conda.io)
 are installed.
 
-### 1. Get the code
+### 1. Getting the code
 
 ```bash
 git clone https://github.com/jay-kook/SFILS.git
