@@ -1,0 +1,9 @@
+(sfils) jaykook@Jaysons-Air SFILS % python mongo/scripts/load_data.py
+Reading Excel file...
+Loaded 437115 rows
+Building documents...
+Inserting documents...
+patrons: 437115 documents
+
+Inserting documents took 6.1 seconds
+Whole script took 64.8 seconds
