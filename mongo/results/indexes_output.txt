@@ -1,0 +1,24 @@
+
+=== A: Count patrons registered in 2003 ===
+Results: 42,903
+Before index: COUNT -> COLLSCAN, docs examined 437,115, median 0.5858 sec
+Created index year_registered_1 in 1.60 sec
+After index:  COUNT -> COUNT_SCAN, docs examined 0, keys examined 42,904, median 0.0185 sec
+Speedup: about 32x
+
+=== B: Patrons with over 1000 checkouts ===
+Results: 17,970
+Before index: PROJECTION_SIMPLE -> COLLSCAN, docs examined 437,115, median 0.2964 sec
+Created index total_checkouts_1 in 1.09 sec
+After index:  PROJECTION_SIMPLE -> FETCH -> IXSCAN, docs examined 17,970, keys examined 17,970, median 0.0801 sec
+Speedup: about 4x
+
+=== C: Count patrons at the Chinatown branch ===
+Results: 12,759
+Before index: COUNT -> COLLSCAN, docs examined 437,115, median 0.2708 sec
+Created index home_library.branch_1 in 1.34 sec
+After index:  COUNT -> COUNT_SCAN, docs examined 0, keys examined 12,760, median 0.0071 sec
+Speedup: about 38x
+
+Saved results to mongo/results/index_experiment.csv
+Indexes now on patrons: ['_id_', 'year_registered_1', 'total_checkouts_1', 'home_library.branch_1']

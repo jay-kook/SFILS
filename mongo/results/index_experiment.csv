@@ -1,4 +1,4 @@
 query,results,plan_before,docs_examined_before,median_sec_before,index,index_build_sec,plan_after,docs_examined_after,keys_examined_after,median_sec_after,speedup
-A: Count patrons registered in 2003,42903,COUNT -> COLLSCAN,437115,0.2886,year_registered_1,1.31,COUNT -> COUNT_SCAN,0,42904,0.016,18.1
-B: Patrons with over 1000 checkouts,17970,PROJECTION_SIMPLE -> COLLSCAN,437115,0.2984,total_checkouts_1,1.09,PROJECTION_SIMPLE -> FETCH -> IXSCAN,17970,17970,0.0788,3.8
-C: Count patrons at the Chinatown branch,12759,COUNT -> COLLSCAN,437115,0.2776,home_library.branch_1,1.67,COUNT -> COUNT_SCAN,0,12760,0.0094,29.5
+A: Count patrons registered in 2003,42903,COUNT -> COLLSCAN,437115,0.5858,year_registered_1,1.6,COUNT -> COUNT_SCAN,0,42904,0.0185,31.6
+B: Patrons with over 1000 checkouts,17970,PROJECTION_SIMPLE -> COLLSCAN,437115,0.2964,total_checkouts_1,1.09,PROJECTION_SIMPLE -> FETCH -> IXSCAN,17970,17970,0.0801,3.7
+C: Count patrons at the Chinatown branch,12759,COUNT -> COLLSCAN,437115,0.2708,home_library.branch_1,1.34,COUNT -> COUNT_SCAN,0,12760,0.0071,38.1
