@@ -52,14 +52,16 @@ def choose_option(title, options, allow_blank=False):
 
 # Lists of choices, built from the data itself
 def get_patron_types():
-    results = patrons.aggregate([
+    results = patrons.aggregate
+    ([
         {"$group": {"_id": "$patron_type"}},
         {"$sort": {"_id.code": 1}},
     ])
     return [r["_id"] for r in results]          
 
 def get_age_ranges():
-    results = patrons.aggregate([
+    results = patrons.aggregate
+    ([
         {"$match": {"age_range": {"$ne": None}}},
         {"$group": {"_id": "$age_range"}},
         {"$sort": {"_id.sort_order": 1}},
@@ -67,7 +69,8 @@ def get_age_ranges():
     return [r["_id"] for r in results]          
 
 def get_branches():
-    results = patrons.aggregate([
+    results = patrons.aggregate
+    ([
         {"$match": {"home_library": {"$ne": None}}},
         {"$group": {"_id": "$home_library.branch", "codes": {"$addToSet": "$home_library.code"}}},
         {"$sort": {"_id": 1}},
@@ -76,7 +79,8 @@ def get_branches():
             for r in results]
 
 def get_notifications():
-    results = patrons.aggregate([
+    results = patrons.aggregate
+    ([
         {"$group": {"_id": "$notification"}},
         {"$sort": {"_id.name": 1}},
     ])
@@ -137,7 +141,8 @@ def show_branch_statistics():
         print("Invalid choice.")
         return
 
-    results = patrons.aggregate([
+    results = patrons.aggregate
+    ([
         {"$match": {"home_library": {"$ne": None}}},
         {"$group": {
             "_id": "$home_library.branch",
